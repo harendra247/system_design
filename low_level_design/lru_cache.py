@@ -42,8 +42,9 @@ New implementation
 '''
 
 class Node():
-    def __init__(self, results):
+    def __init__(self, results, query):
         self.results = results
+        self.query = query
         self.next = next
 
 class LinkedList():
@@ -100,6 +101,6 @@ class Cache():
             else:
                 self.size += 1
             # Add the new key and value
-            new_node = Node(results)
+            new_node = Node(results, query)
             self.linked_list.append_to_front(new_node)
             self.lookup[query] = new_node
