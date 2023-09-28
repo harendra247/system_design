@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
 
+'''
+Assumptions
+For simplicity, the keys are integers only.
+For collision resolution, we are using chaining.
+Do we have to worry about load factors? No
+Inputs are valid. No validatin required. 
+these fits memory.
+'''
 class Item():
     def __init__(self, key, value):
         self.key = key
